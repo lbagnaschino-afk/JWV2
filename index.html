@@ -1,153 +1,122 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JOGS - Just Ordinary Group Stuff: rock band from Milan. Discover our music, concerts, merch and gallery.">
-    <title>JOGS - Just Ordinary Group Stuff</title>
-
-    <link rel="stylesheet" href="Sito.css?v8">
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-</head>
-<body>
-
 <header>
     <div class="overlay"></div>
-    <h1 id="title">JOGS</h1>
-    <p id="subtitle"><b>Just Ordinary Group Stuff</b></p>
+    <h1 id="title" data-i18n="title">JOGS</h1>
+     <link rel="stylesheet" href="Sito.css?v9">
+      <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <p id="subtitle" data-i18n="subtitle"><b>Just Ordinary Group Stuff</b></p>
+
+    <!-- 🌍 Selettore lingua -->
+    <div class="lang-switch">
+        <img src="Italy_32.png" alt="Italiano" id="lang-it" class="flag">
+        <img src="GB_32.png" alt="English" id="lang-en" class="flag">
+    </div>
 </header>
 
 <!-- Menu Desktop -->
 <nav class="desktop-nav">
-    <button class="tab-btn" data-tab="chi-siamo">About us</button>
-    <button class="tab-btn" data-tab="concerti">Concerts</button>
-    <button class="tab-btn" data-tab="merch">Merch</button>
-    <button class="tab-btn" data-tab="music">Our Music</button>
-    <button class="tab-btn" data-tab="galleria">Gallery</button>
+    <button class="tab-btn" data-tab="chi-siamo" data-i18n="menu.about">About us</button>
+    <button class="tab-btn" data-tab="concerti" data-i18n="menu.concerts">Concerts</button>
+    <button class="tab-btn" data-tab="merch" data-i18n="menu.merch">Merch</button>
+    <button class="tab-btn" data-tab="music" data-i18n="menu.music">Our Music</button>
+    <button class="tab-btn" data-tab="galleria" data-i18n="menu.gallery">Gallery</button>
 </nav>
 
 <!-- Menu Mobile -->
 <button class="menu-toggle">☰ Menu</button>
 <nav class="nav-links">
-    <button class="tab-btn" data-tab="chi-siamo">About us</button>
-    <button class="tab-btn" data-tab="concerti">Concerts</button>
-    <button class="tab-btn" data-tab="merch">Merch</button>
-    <button class="tab-btn" data-tab="music">Our Music</button>
-    <button class="tab-btn" data-tab="galleria">Gallery</button>
+    <button class="tab-btn" data-tab="chi-siamo" data-i18n="menu.about">About us</button>
+    <button class="tab-btn" data-tab="concerti" data-i18n="menu.concerts">Concerts</button>
+    <button class="tab-btn" data-tab="merch" data-i18n="menu.merch">Merch</button>
+    <button class="tab-btn" data-tab="music" data-i18n="menu.music">Our Music</button>
+    <button class="tab-btn" data-tab="galleria" data-i18n="menu.gallery">Gallery</button>
 </nav>
 
 <main>
     <!-- Chi Siamo -->
     <section id="chi-siamo" class="tab-content active">
-        <h2>About us</h2>
-        <p>What do you get by putting together five guys with a passion for rock music? Just Ordinary Group Stuff.</p>
-        <p>Formed in 2020, the band is here to prove they’re in fact not ordinary at all: the different musical influences of each member lead to the creation of songs which contain many shades of different genres and are affected by the contemporary and dynamic nature of their home city, Milan.</p>
-        <p>The band consists of vocalist Margherita Mischi, lead guitarist Simone Gattoni, rhythm guitarist Luca Bagnaschino, bassist Federico Mango, and drummer Matteo Borlacchi.</p>
+        <h2 data-i18n="about.title">About us</h2>
+        <p data-i18n="about.p1">What do you get by putting together five guys with a passion for rock music? Just Ordinary Group Stuff.</p>
+        <p data-i18n="about.p2">Formed in 2020, the band is here to prove they’re in fact not ordinary at all: the different musical influences of each member lead to the creation of songs which contain many shades of different genres and are affected by the contemporary and dynamic nature of their home city, Milan.</p>
+        <p data-i18n="about.p3">The band consists of vocalist Margherita Mischi, lead guitarist Simone Gattoni, rhythm guitarist Luca Bagnaschino, bassist Federico Mango, and drummer Matteo Borlacchi.</p>
 
         <div class="members">
             <div class="member">
-                <a href="https://www.instagram.com/easily._.amused/" target="_blank" rel="noopener noreferrer">
-                    <img src="Foto_Gatto.jpg" alt="Simone Gattoni, lead guitarist of JOGS">
-                </a>
+                <img src="Foto_Gatto.jpg" alt="Simone Gattoni, lead guitarist of JOGS">
                 <h3>Simone Gattoni</h3>
-                <p>Lead guitarist</p>
+                <p data-i18n="roles.lead">Lead guitarist</p>
             </div>
             <div class="member">
-                <a href="https://www.instagram.com/lucabagnaschino/" target="_blank" rel="noopener noreferrer">
-                    <img src="Foto_Luke.jpg" alt="Luca Bagnaschino, rhythm guitarist of JOGS">
-                </a>
+                <img src="Foto_Luke.jpg" alt="Luca Bagnaschino, rhythm guitarist of JOGS">
                 <h3>Luca Bagnaschino</h3>
-                <p>Rhythm guitarist</p>
+                <p data-i18n="roles.rhythm">Rhythm guitarist</p>
             </div>
             <div class="member">
-                <a href="https://www.instagram.com/_fedemango_/" target="_blank" rel="noopener noreferrer">
-                    <img src="Foto_Fede.jpeg" alt="Federico Mango, bassist of JOGS">
-                </a>
+                <img src="Foto_Fede.jpeg" alt="Federico Mango, bassist of JOGS">
                 <h3>Federico Mango</h3>
-                <p>Bassist</p>
+                <p data-i18n="roles.bass">Bassist</p>
             </div>
             <div class="member">
-                <a href="https://www.instagram.com/borlacchi/" target="_blank" rel="noopener noreferrer">
-                    <img src="Foto_Borla.jpg" alt="Matteo Borlacchi, drummer of JOGS">
-                </a>
+                <img src="Foto_Borla.jpg" alt="Matteo Borlacchi, drummer of JOGS">
                 <h3>Matteo Borlacchi</h3>
-                <p>Drummer</p>
+                <p data-i18n="roles.drums">Drummer</p>
             </div>
             <div class="member">
-                <a href="https://www.instagram.com/margarita.al.whisky/" target="_blank" rel="noopener noreferrer">
-                    <img src="Foto_Marghe.jpg" alt="Margherita Mischi, vocalist of JOGS">
-                </a>
+                <img src="Foto_Marghe.jpg" alt="Margherita Mischi, vocalist of JOGS">
                 <h3>Margherita Mischi</h3>
-                <p>Vocalist</p>
+                <p data-i18n="roles.vocals">Vocalist</p>
             </div>
         </div>
     </section>
 
     <!-- Concerts -->
     <section id="concerti" class="tab-content">
-        <h2>Concerts</h2>
+        <h2 data-i18n="concerts.title">Concerts</h2>
         <div class="single">
-            <h3>November 5th, 2025 - Barrio's</h3>
-            <p>Contest: 1000 & Una Band</p>
-            <a href="https://www.barrios.it/event/1000-una-band-selezioni-barrios-live-18/" target="_blank" rel="noopener noreferrer">
-                <img src="Concerto_Barrios.jpg" alt="JOGS live at Barrio's, Milan">
-            </a>
-            <p class="address">📍 Piazza Donne Partigiane, 20142 Milano MI</p>
+            <h3 data-i18n="concerts.event1.title">November 5th, 2025 - Barrio's</h3>
+            <p data-i18n="concerts.event1.desc">Contest: 1000 & Una Band</p>
+            <img src="Concerto_Barrios.jpg" alt="JOGS live at Barrio's, Milan">
+            <p class="address" data-i18n="concerts.event1.address">📍 Piazza Donne Partigiane, 20142 Milano MI</p>
         </div>
     </section>
 
     <!-- Merch -->
     <section id="merch" class="tab-content">
-        <h2>Merch</h2>
+        <h2 data-i18n="merch.title">Merch</h2>
         <div class="merch-items">
             <div class="merch-item">
                 <img src="maglietta.jpg" alt="Official JOGS T-shirt">
-                <p>Official T-shirt</p>
-                <button>Buy</button>
+                <p data-i18n="merch.tshirt">Official T-shirt</p>
+                <button data-i18n="merch.buy">Buy</button>
             </div>
             <div class="merch-item">
                 <img src="cd.jpg" alt="Official JOGS CD">
-                <p>Official CD</p>
-                <button>Buy</button>
+                <p data-i18n="merch.cd">Official CD</p>
+                <button data-i18n="merch.buy">Buy</button>
             </div>
             <div class="merch-item">
                 <img src="poster.jpg" alt="Official JOGS Poster">
-                <p>Official Poster</p>
-                <button>Buy</button>
+                <p data-i18n="merch.poster">Official Poster</p>
+                <button data-i18n="merch.buy">Buy</button>
             </div>
         </div>
     </section>
 
-    <!-- Our Music -->
+    <!-- Music -->
     <section id="music" class="tab-content">
-        <h2>Our Music</h2>
+        <h2 data-i18n="music.title">Our Music</h2>
         <div class="single">
             <h3>Decisions</h3>
-            <p>A powerful rock track that mixes modern vibes with classic energy — the sound that defines JOGS.</p>
-            <img src="1.png" alt="Cover of the single Decisions by JOGS">
-            <p class="listen">
-                Listen now on 
-                <a href="#" target="_blank" rel="noopener noreferrer">Spotify</a>, 
-                <a href="#" target="_blank" rel="noopener noreferrer">Apple Music</a>, 
-                <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>.
-            </p>
+            <p data-i18n="music.song1.desc">A powerful rock track that mixes modern vibes with classic energy — the sound that defines JOGS.</p>
         </div>
         <div class="single">
             <h3>Shining Hill (Where is my paradise?)</h3>
-            <p>Explosive riffs and deep lyrics — a song that captures the raw intensity and emotion of the band.</p>
-            <img src="2.png" alt="Cover of the single Shining Hill by JOGS">
-            <p class="listen">
-                Listen now on 
-                <a href="#" target="_blank" rel="noopener noreferrer">Spotify</a>, 
-                <a href="#" target="_blank" rel="noopener noreferrer">Apple Music</a>, 
-                <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>.
-            </p>
+            <p data-i18n="music.song2.desc">Explosive riffs and deep lyrics — a song that captures the raw intensity and emotion of the band.</p>
         </div>
     </section>
 
     <!-- Gallery -->
     <section id="galleria" class="tab-content">
-        <h2>Gallery</h2>
+        <h2 data-i18n="gallery.title">Gallery</h2>
         <div class="gallery">
             <img src="g1.jpg" alt="JOGS live performance 1">
             <img src="g2.jpg" alt="JOGS live performance 2">
@@ -159,11 +128,11 @@
 </main>
 
 <footer>
-    <p>Follow us on social media:</p>
-    <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
-    <a href="#" target="_blank" rel="noopener noreferrer">Spotify</a>
-    <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
+    <p data-i18n="footer.follow">Follow us on social media:</p>
+    <a href="#" target="_blank">Instagram</a>
+    <a href="#" target="_blank">TikTok</a>
+    <a href="#" target="_blank">Spotify</a>
+    <a href="#" target="_blank">YouTube</a>
 </footer>
 
 <script>
@@ -171,24 +140,87 @@ const buttons = document.querySelectorAll('.tab-btn');
 const sections = document.querySelectorAll('.tab-content');
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+const flagIt = document.getElementById('lang-it');
+const flagEn = document.getElementById('lang-en');
 
-// Cambio sezione
+// 🔹 Cambio sezione
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
         const target = btn.dataset.tab;
         sections.forEach(sec => sec.classList.remove('active'));
         document.getElementById(target).classList.add('active');
-
-        // Chiude il menu mobile quando clicchi su una voce
         navLinks.classList.remove('active');
     });
 });
 
-// Menu mobile toggle
+// 🔹 Toggle menu mobile
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
-</script>
 
-</body>
-</html>
+// 🔹 Traduzioni
+const translations = {
+    it: {
+        title: "JOGS",
+        subtitle: "Just Ordinary Group Stuff",
+        menu: { about: "Chi siamo", concerts: "Concerti", merch: "Merch", music: "Musica", gallery: "Galleria" },
+        about: {
+            title: "Chi siamo",
+            p1: "Cosa succede quando metti insieme cinque ragazzi con la passione per il rock? Just Ordinary Group Stuff.",
+            p2: "Formatisi nel 2020, la band dimostra di non essere affatto 'ordinaria': le diverse influenze musicali di ogni membro portano alla creazione di brani che mescolano vari generi e riflettono la natura dinamica della loro città, Milano.",
+            p3: "La band è composta da Margherita Mischi (voce), Simone Gattoni (chitarra solista), Luca Bagnaschino (chitarra ritmica), Federico Mango (basso) e Matteo Borlacchi (batteria)."
+        },
+        roles: { lead: "Chitarrista solista", rhythm: "Chitarrista ritmico", bass: "Bassista", drums: "Batterista", vocals: "Voce" },
+        concerts: {
+            title: "Concerti",
+            event1: { title: "5 Novembre 2025 - Barrio's", desc: "Contest: 1000 & Una Band", address: "📍 Piazza Donne Partigiane, 20142 Milano MI" }
+        },
+        merch: { title: "Merchandising", tshirt: "Maglietta ufficiale", cd: "CD ufficiale", poster: "Poster ufficiale", buy: "Acquista" },
+        music: { title: "La nostra musica", song1: { desc: "Un brano rock potente che unisce vibrazioni moderne ed energia classica — il suono che definisce i JOGS." },
+                 song2: { desc: "Riff esplosivi e testi intensi — una canzone che cattura l’energia e l’emozione della band." }},
+        gallery: { title: "Galleria" },
+        footer: { follow: "Seguici sui social:" }
+    },
+    en: {
+        title: "JOGS",
+        subtitle: "Just Ordinary Group Stuff",
+        menu: { about: "About us", concerts: "Concerts", merch: "Merch", music: "Our Music", gallery: "Gallery" },
+        about: {
+            title: "About us",
+            p1: "What do you get by putting together five guys with a passion for rock music? Just Ordinary Group Stuff.",
+            p2: "Formed in 2020, the band is here to prove they’re in fact not ordinary at all: each member’s influences blend into songs rich with genre diversity and Milan’s modern spirit.",
+            p3: "The band consists of Margherita Mischi (vocals), Simone Gattoni (lead guitar), Luca Bagnaschino (rhythm guitar), Federico Mango (bass), and Matteo Borlacchi (drums)."
+        },
+        roles: { lead: "Lead guitarist", rhythm: "Rhythm guitarist", bass: "Bassist", drums: "Drummer", vocals: "Vocalist" },
+        concerts: {
+            title: "Concerts",
+            event1: { title: "November 5th, 2025 - Barrio's", desc: "Contest: 1000 & Una Band", address: "📍 Piazza Donne Partigiane, 20142 Milano MI" }
+        },
+        merch: { title: "Merch", tshirt: "Official T-shirt", cd: "Official CD", poster: "Official Poster", buy: "Buy" },
+        music: { title: "Our Music", song1: { desc: "A powerful rock track that mixes modern vibes with classic energy — the sound that defines JOGS." },
+                 song2: { desc: "Explosive riffs and deep lyrics — a song that captures the raw intensity and emotion of the band." }},
+        gallery: { title: "Gallery" },
+        footer: { follow: "Follow us on social media:" }
+    }
+};
+
+// 🔹 Cambio lingua con fade
+function setLanguage(lang) {
+    const elements = document.querySelectorAll("[data-i18n]");
+    elements.forEach(el => el.classList.add("fade"));
+    setTimeout(() => {
+        elements.forEach(el => {
+            const path = el.dataset.i18n.split(".");
+            let value = translations[lang];
+            path.forEach(p => value = value ? value[p] : null);
+            if (value) el.textContent = value;
+            el.classList.remove("fade");
+        });
+        localStorage.setItem("lang", lang);
+    }, 300);
+}
+
+flagIt.addEventListener("click", () => setLanguage("it"));
+flagEn.addEventListener("click", () => setLanguage("en"));
+setLanguage(localStorage.getItem("lang") || "en");
+</script>
