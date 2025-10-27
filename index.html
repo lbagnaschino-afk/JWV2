@@ -1,8 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOGS</title>
+
+    <!-- 🔗 Collegamento CSS -->
+    <link rel="stylesheet" href="Sito.css?v2.0">
+
+    <!-- 🪶 Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+<body>
+
 <header>
     <div class="overlay"></div>
     <h1 id="title" data-i18n="title">JOGS</h1>
-     <link rel="stylesheet" href="Sito.css?v9">
-      <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <p id="subtitle" data-i18n="subtitle"><b>Just Ordinary Group Stuff</b></p>
 
     <!-- 🌍 Selettore lingua -->
@@ -136,6 +149,7 @@
 </footer>
 
 <script>
+// --- Gestione sezioni e lingua ---
 const buttons = document.querySelectorAll('.tab-btn');
 const sections = document.querySelectorAll('.tab-content');
 const menuToggle = document.querySelector('.menu-toggle');
@@ -143,7 +157,7 @@ const navLinks = document.querySelector('.nav-links');
 const flagIt = document.getElementById('lang-it');
 const flagEn = document.getElementById('lang-en');
 
-// 🔹 Cambio sezione
+// Selezione sezione
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
         const target = btn.dataset.tab;
@@ -153,7 +167,7 @@ buttons.forEach(btn => {
     });
 });
 
-// 🔹 Toggle menu mobile
+// Menu mobile
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
@@ -176,8 +190,11 @@ const translations = {
             event1: { title: "5 Novembre 2025 - Barrio's", desc: "Contest: 1000 & Una Band", address: "📍 Piazza Donne Partigiane, 20142 Milano MI" }
         },
         merch: { title: "Merchandising", tshirt: "Maglietta ufficiale", cd: "CD ufficiale", poster: "Poster ufficiale", buy: "Acquista" },
-        music: { title: "La nostra musica", song1: { desc: "Un brano rock potente che unisce vibrazioni moderne ed energia classica — il suono che definisce i JOGS." },
-                 song2: { desc: "Riff esplosivi e testi intensi — una canzone che cattura l’energia e l’emozione della band." }},
+        music: { 
+            title: "La nostra musica",
+            song1: { desc: "Un brano rock potente che unisce vibrazioni moderne ed energia classica — il suono che definisce i JOGS." },
+            song2: { desc: "Riff esplosivi e testi intensi — una canzone che cattura l’energia e l’emozione della band." }
+        },
         gallery: { title: "Galleria" },
         footer: { follow: "Seguici sui social:" }
     },
@@ -197,30 +214,20 @@ const translations = {
             event1: { title: "November 5th, 2025 - Barrio's", desc: "Contest: 1000 & Una Band", address: "📍 Piazza Donne Partigiane, 20142 Milano MI" }
         },
         merch: { title: "Merch", tshirt: "Official T-shirt", cd: "Official CD", poster: "Official Poster", buy: "Buy" },
-        music: { title: "Our Music", song1: { desc: "A powerful rock track that mixes modern vibes with classic energy — the sound that defines JOGS." },
-                 song2: { desc: "Explosive riffs and deep lyrics — a song that captures the raw intensity and emotion of the band." }},
+        music: { 
+            title: "Our Music",
+            song1: { desc: "A powerful rock track that mixes modern vibes with classic energy — the sound that defines JOGS." },
+            song2: { desc: "Explosive riffs and deep lyrics — a song that captures the raw intensity and emotion of the band." }
+        },
         gallery: { title: "Gallery" },
         footer: { follow: "Follow us on social media:" }
     }
 };
 
-// 🔹 Cambio lingua con fade
-function setLanguage(lang) {
-    const elements = document.querySelectorAll("[data-i18n]");
-    elements.forEach(el => el.classList.add("fade"));
-    setTimeout(() => {
-        elements.forEach(el => {
-            const path = el.dataset.i18n.split(".");
-            let value = translations[lang];
-            path.forEach(p => value = value ? value[p] : null);
-            if (value) el.textContent = value;
-            el.classList.remove("fade");
-        });
-        localStorage.setItem("lang", lang);
-    }, 300);
-}
-
 flagIt.addEventListener("click", () => setLanguage("it"));
 flagEn.addEventListener("click", () => setLanguage("en"));
 setLanguage(localStorage.getItem("lang") || "en");
 </script>
+
+</body>
+</html>
